@@ -17,6 +17,7 @@ Client::Client(string  nom, string prenom, int identifiant, string codePostal, l
 	, identifiant_(identifiant)
 	, codePostal_(codePostal)
 	, dateNaissance_(date)
+	, monPanier_(nullptr)
 {}
 
 /**
