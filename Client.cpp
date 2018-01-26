@@ -1,4 +1,132 @@
-#include "client.h"
-#include <iostream>
+/**************************************************
+* Nom: client.cpp
+* Auteurs: 1894061 et 1899088
+* Descripion: Implémentation de la classe Panier
+*************************************************/
 
-using namespace std;
+#include "./client.h"
+
+
+/**
+ * Constructeur par paramètres
+ * 
+ */
+Client::Client(string  nom, string prenom, int identifiant, string codePostal, long date)
+	:nom_(nom)
+	, prenom_(prenom)
+	, identifiant_(identifiant)
+	, codePostal_(codePostal)
+	, dateNaissance_(date)
+{}
+
+/**
+ * Destructeur
+ */
+Client::~Client()
+{
+	for (int i = 0; i < monPanier_->obtenirNombreContenu; i++)
+		delete monPanier_->obtenirContenuPanier[i];
+	delete[] monPanier_->obtenirContenuPanier;
+	delete monPanier_;
+}
+
+/**
+ * Accesseur du nom du client
+ * \return nom_ {string} nom du client
+ */
+string Client::obtenirNom() const
+{
+	return nom_;
+}
+
+/**
+* Accesseur du prénom du client
+* \return prenom_ {string} prénom du client
+*/
+string Client::obtenirPrenom() const
+{
+	return prenom_;
+}
+
+/**
+* Accesseur de l'identifiant du client
+* \return identifiant_ {int} identifiant du client
+*/
+int Client::obtenirIdentifiant() const
+{
+	return identifiant_;
+}
+
+/**
+* Accesseur du code postal du client
+* \return codePostal_ {string} code postal du client
+*/
+string Client::obtenirCodePostal() const
+{
+	return codePostal_;
+}
+
+/**
+* Accesseur de la date de naissance du client
+* \return codePostal_ {long} date de naissance du client
+*/
+long Client::obtenirDateNaissance() const
+{
+	return dateNaissance_;
+}
+
+
+// Mutateurs
+
+void Client::modifierNom(string nom)
+{
+	nom_ = nom;
+}
+
+void Client::modifierPrenom(string prenom)
+{
+	prenom_ = prenom;
+}
+
+void Client::modifierIdentifiant(int identifiant)
+{
+	identifiant_ = identifiant;
+}
+
+void Client::modifierCodePostal(string codePostal)
+{
+	codePostal_ = codePostal;
+}
+
+void Client::modifierDateNaissance(long date)
+{
+	dateNaissance_ = date;
+}
+
+
+// Autres méthodes
+
+void Client::acheter(Produit * prod)
+{
+	if (monPanier_ == nullptr)
+		monPanier_ = new Panier(4);
+	monPanier_->ajouter(prod);
+}
+
+void Client::afficherPanier()
+{
+	if (monPanier_ != nullptr || monPanier_->obtenirNombreContenu() >= 0)
+	{
+		cout << "Votre Panier:" << endl;
+		for (int i = 0; i < monPanier_->obtenirNombreContenu(); i++)
+			cout << "Item #" << i + 1 << ": " << monPanier_->obtenirContenuPanier[i] << endl;
+	}
+	else
+		cout << "Votre panier est vide" << endl;
+}
+
+void Client::livrerPanier()
+{
+	monPanier_->livrer();
+	delete monPanier_;
+}
