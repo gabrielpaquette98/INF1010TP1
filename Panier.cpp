@@ -27,21 +27,38 @@ Panier::~Panier()
 	delete[] contenuPanier_;
 }
 
+/**
+* Accesseur du contenu du panier
+* \return contenuPanier_ {Produit**} contenu du panier
+*/
 Produit** Panier::obtenirContenuPanier() const
 {
     return contenuPanier_;
 }
 
+/**
+* Accesseur du nombre d'items dans le panier
+* \return nombreContenu_ {int} nombre d'éléments du panier
+*/
 int Panier::obtenirNombreContenu() const
 {
     return nombreContenu_;
 }
 
+/**
+* Accesseur du montant total à payer
+* \return totalAPayer_ {double} total à payer du panier
+*/
 double Panier::obtenirTotalApayer() const
 {
     return totalAPayer_;
 }
 
+/**
+* Méthode permettant d'ajouter un produit au panier
+* \param \in prod {Produit*} Pointeur du produit à ajouter
+* \return void
+*/
 void Panier::ajouter(Produit* prod)
 {
 	contenuPanier_[nombreContenu_] = prod;
@@ -54,6 +71,11 @@ void Panier::ajouter(Produit* prod)
 	}
 }
 
+/**
+* Méthode permettant de livrer le panier
+* \param void
+* \return void
+*/
 void Panier::livrer()
 {
 	for (int i = 0; i < capaciteContenu_; i++)
@@ -64,6 +86,11 @@ void Panier::livrer()
 	totalAPayer_ = 0.0;
 }
 
+/**
+* Méthode permettant d'afficher l'état du panier dans la console
+* \param void
+* \return void
+*/
 void Panier::afficher()
 {
 	cout << "--------------------Etat du panier--------------------" << endl

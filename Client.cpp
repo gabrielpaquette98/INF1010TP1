@@ -141,6 +141,7 @@ void Client::acheter(Produit * prod)
 
 /**
 * Méthode permettant d'afficher le contenu du panier d'un client
+* dans la console
 * \param void
 * \return void
 */
