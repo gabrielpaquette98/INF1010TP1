@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="E:\G\Poly\Session 2\INF1010_Programmation_Oriente_Objet\TP1\Main.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Produit.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>

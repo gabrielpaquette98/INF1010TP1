@@ -23,7 +23,7 @@ string Rayon::obtenirCategorie() const
 }
 Produit** Rayon::obtenirTousProduits()
 {
-	return tousProduits_;// renvoyer la liste? sans encapsulation ou copie??
+	return tousProduits_;
 }
 int Rayon::obtenirCapaciteProduits() const
 {

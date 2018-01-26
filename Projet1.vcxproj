@@ -114,7 +114,6 @@
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="Panier.cpp" />
     <ClCompile Include="Rayon.cpp" />
-    <ClCompile Include="E:\G\Poly\Session 2\INF1010_Programmation_Oriente_Objet\TP1\Main.cpp" />
     <ClCompile Include="Produit.cpp" />
   </ItemGroup>
   <ItemGroup>
