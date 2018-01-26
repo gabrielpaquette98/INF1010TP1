@@ -112,6 +112,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Panier.cpp" />
     <ClCompile Include="Rayon.cpp" />
     <ClCompile Include="Produit.cpp" />
