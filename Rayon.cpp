@@ -6,19 +6,9 @@ using namespace std;
 static const int CONSTANTE_CAPACITE = 5;
 
 // Constructeurs par defaut et par parametres
-Rayon::Rayon()
+
+Rayon::Rayon(string cat) :categorie_(cat), tousProduits_(nullptr), capaciteProduits_(0), nombreProduits_(0)
 {
-	categorie_ = "inconnu";
-	tousProduits_ = nullptr;
-	capaciteProduits_ = 0;
-	nombreProduits_ = 0;
-}
-Rayon::Rayon(string cat)
-{
-	categorie_ = cat;
-	tousProduits_ = nullptr;
-	capaciteProduits_ = 0;
-	nombreProduits_ = 0;
 }
 
 Rayon::~Rayon()

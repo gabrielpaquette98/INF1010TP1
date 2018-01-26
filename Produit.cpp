@@ -4,17 +4,12 @@
 using namespace std;
 
 // Constructeurs par defaut et par parametres
-Produit::Produit()
+
+Produit::Produit(string nom, int reference, double prix) 
+	: nom_(nom)
+	, reference_(reference)
+	, prix_(prix)
 {
-	nom_ = "outil";
-	reference_ = 0;
-	prix_ = 0;
-}
-Produit::Produit(string nom, int reference, double prix)
-{
-	nom_ = nom;
-	reference_ = reference;
-	prix_ = prix;
 }
 
 //méthodes d'accès

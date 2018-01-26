@@ -15,8 +15,7 @@ class Produit
 {
 public:
 	// Constructeurs par defaut et par parametres
-	Produit();
-	Produit(string nom, int reference, double prix);
+	Produit(string nom = "outil", int reference = 0, double prix =  0);
 
 	// Methodes d'acces
 	string obtenirNom() const;
