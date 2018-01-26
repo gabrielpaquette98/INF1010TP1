@@ -4,6 +4,7 @@
 using namespace std;
 
 static const int CONSTANTE_CAPACITE = 5;
+
 // Constructeurs par defaut et par parametres
 Rayon::Rayon()
 {
@@ -18,6 +19,11 @@ Rayon::Rayon(string cat)
 	tousProduits_ = nullptr;
 	capaciteProduits_ = 0;
 	nombreProduits_ = 0;
+}
+
+Rayon::~Rayon()
+{
+	delete[] tousProduits_;
 }
 
 //méthodes d'accès
