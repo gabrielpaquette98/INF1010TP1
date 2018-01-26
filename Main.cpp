@@ -19,7 +19,15 @@ int main()
 
 	//1-  Creez 15 objets du classe produit
     
-    
+    	const int NOMBRE_OBJETS_A_CREER = 15;
+	
+	vector<Produit*> listeDeProduits;
+
+	for (size_t i = 0; i < NOMBRE_OBJETS_A_CREER; i++)
+	{
+		Produit* produitAjoute = new Produit("produit" + to_string(i+1), i + 1, 10.00);
+		listeDeProduits.push_back(produitAjoute);
+	}
     
 	//2-  Modifiez le nom, la référence, le prix de  troisieme objet Produit créé
     //   afficher les attributs de cet objet Produit
