@@ -22,8 +22,6 @@ Panier::Panier(int capacite)
 */
 Panier::~Panier()
 {
-	for (int i = 0; i < capaciteContenu_; i++)
-		delete contenuPanier_[i];
 	delete[] contenuPanier_;
 }
 

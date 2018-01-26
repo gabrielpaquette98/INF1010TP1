@@ -24,9 +24,7 @@ Client::Client(string  nom, string prenom, int identifiant, string codePostal, l
  */
 Client::~Client()
 {
-	for (int i = 0; i < monPanier_->obtenirNombreContenu; i++)
-		delete monPanier_->obtenirContenuPanier[i];
-	delete[] monPanier_->obtenirContenuPanier;
+	delete monPanier_->obtenirContenuPanier;
 	delete monPanier_;
 }
 
