@@ -149,7 +149,7 @@ void Client::afficherPanier()
 	{
 		cout << "Votre Panier:" << endl;
 		for (int i = 0; i < monPanier_->obtenirNombreContenu(); i++)
-			cout << "Item #" << i + 1 << ": " << monPanier_->obtenirContenuPanier[i] << endl;
+			cout << "Item #" << i + 1 << ": " << monPanier_->obtenirContenuPanier()[i] << endl;
 	}
 	else
 		cout << "Votre panier est vide" << endl;
