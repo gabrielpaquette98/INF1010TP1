@@ -76,36 +76,62 @@ long Client::obtenirDateNaissance() const
 }
 
 
-// Mutateurs
-
+/**
+ * Mutateur du nom du client
+ * \param \in nom {string} nom à donner au client
+ * \return void
+ */
 void Client::modifierNom(string nom)
 {
 	nom_ = nom;
 }
 
+/**
+* Mutateur du prénom du client
+* \param \in prenom {string} prénom à donner au client
+* \return void
+*/
 void Client::modifierPrenom(string prenom)
 {
 	prenom_ = prenom;
 }
 
+/**
+* Mutateur de l'identifiant du client
+* \param \in identifiant {int} identifiant à donner au client
+* \return void
+*/
 void Client::modifierIdentifiant(int identifiant)
 {
 	identifiant_ = identifiant;
 }
 
+/**
+* Mutateur du code postal du client
+* \param \in codePostal {string} code postal à donner au client
+* \return void
+*/
 void Client::modifierCodePostal(string codePostal)
 {
 	codePostal_ = codePostal;
 }
 
+/**
+* Mutateur de la date de naissance du client
+* \param \in date {ling} date de naissance à donner au client
+* \return void
+*/
 void Client::modifierDateNaissance(long date)
 {
 	dateNaissance_ = date;
 }
 
-
-// Autres méthodes
-
+/**
+* Méthode permettant à un client d'acheter un produit
+* et de l'ajouter à son panier
+* \param \in prod {Produit*} produit à acheter
+* \return void
+*/
 void Client::acheter(Produit * prod)
 {
 	if (monPanier_ == nullptr)
@@ -113,6 +139,11 @@ void Client::acheter(Produit * prod)
 	monPanier_->ajouter(prod);
 }
 
+/**
+* Méthode permettant d'afficher le contenu du panier d'un client
+* \param void
+* \return void
+*/
 void Client::afficherPanier()
 {
 	if (monPanier_ != nullptr || monPanier_->obtenirNombreContenu() >= 0)
@@ -125,6 +156,11 @@ void Client::afficherPanier()
 		cout << "Votre panier est vide" << endl;
 }
 
+/**
+* Méthode permettant de livrer le panier d'un client
+* \param void
+* \return void
+*/
 void Client::livrerPanier()
 {
 	monPanier_->livrer();
