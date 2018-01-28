@@ -1,3 +1,8 @@
+/**************************************************
+* Nom: Rayon.cpp
+* Auteurs: 1894061 et 1899088
+* Descripion: Implémentation de la classe Rayon
+*************************************************/
 #include "Rayon.h"
 #include <iostream>
 
@@ -5,71 +10,103 @@ using namespace std;
 
 static const int CONSTANTE_CAPACITE = 5;
 
-// Constructeurs par defaut et par parametres
+/**
+* Constructeur par paramètres (valeurs par défaut définies dans notre fichier Rayon.h)
+*
+*/
+Rayon::Rayon(string cat) 
+	: categorie_(cat)
+	, tousProduits_(nullptr)
+	, capaciteProduits_(0)
+	, nombreProduits_(0)
+{}
 
-Rayon::Rayon(string cat) :categorie_(cat), tousProduits_(nullptr), capaciteProduits_(0), nombreProduits_(0)
-{
-}
-
+/**
+* Destructeur
+*/
 Rayon::~Rayon()
 {
 	delete[] tousProduits_;
 }
 
-//méthodes d'accès
+/**
+* Accesseur du nom de cathégorie du rayon
+* \return categorie_ {string} nom de catégorie du rayon
+*/
 string Rayon::obtenirCategorie() const
 {
 	return categorie_;
 }
+/**
+* Accesseur du contenu du rayon
+* \return tousProduits_ {Produit**} contenu du rayon
+*/
 Produit** Rayon::obtenirTousProduits()
 {
 	return tousProduits_;
 }
+/**
+* Accesseur de la capacité du rayon
+* \return capaciteProduits_ {int} capacité du rayon
+*/
 int Rayon::obtenirCapaciteProduits() const
 {
 	return capaciteProduits_;
 }
+/**
+* Accesseur du nombre de produits dans le rayon
+* \return nombreProduits_ {int} nombre de produits dans le rayon
+*/
 int Rayon::obtenirNombreProduits() const
 {
 	return nombreProduits_;
 }
 
-//méthodes de modification
+/**
+* Mutateur du nom de catégorie du rayon
+* \param \in cat {string} nom à donner a la catégorie du rayon
+* \return void
+*/
 void Rayon::modifierCategorie(string cat)
 {
 	categorie_ = cat;
 }
 
-// autres methodes
+/**
+* Méthode permettant d'ajouter un produit au rayon selon le nombre déjà contenu
+* \param \in prod {Produit*} Pointeur du produit à ajouter
+* \return void
+*/
 void Rayon::ajouterProduit(Produit* produit)
 {
-	if (tousProduits_ == nullptr) //si le tableau est null, on l'initialise. il y aura de la place pour le premier produit
-	{
-		//initialiser le tableau de produits à 5; mettre la capacité à 5;
+	if (tousProduits_ == nullptr)
 		tousProduits_ = new Produit*[CONSTANTE_CAPACITE];
-	}
-	else //le tableau est non null. y a-t-il de la place restante pour notre nouveau produit?
-	{
-		if (capaciteProduits_ == nombreProduits_) //si on a atteint la capacité (pu de place), on veut augmenter la capacité du tableau de 5
+	else
+		if (capaciteProduits_ == nombreProduits_)
 		{
 			Produit** nouveauRayon = new Produit*[capaciteProduits_ + CONSTANTE_CAPACITE];//on crée la nouvelle liste de produits
 			for (int i = 0; i < nombreProduits_; i++)
-			{
-				nouveauRayon[i] = tousProduits_[i];//on copie tout les pointeurs vers le nouveau tableau
-			}
-			delete[] tousProduits_; //on delete l'ancien tableau
-			tousProduits_ = nouveauRayon;// on copie l'adresse du nouveau rayon sur le tableau du rayon
+				nouveauRayon[i] = tousProduits_[i];
+			delete[] tousProduits_;
+			tousProduits_ = nouveauRayon;
 		}
-		//else on a de la place dans le rayon
-	}
-
-	//on s'est assuré que notre tableau a de la place. Nous pouvons ajouter le produit au rayon.
 	tousProduits_[nombreProduits_] = produit;
-	nombreProduits_++; //on a ajouté un produit
+	nombreProduits_++;
 }
+
+/**
+* Méthode permettant d'afficher un rayon dans la console
+* \param void
+* \return void
+*/
 void Rayon::afficher()
 {
-	cout << "Le Rayon de categorie: " + categorie_ + " a une capacite de: " << capaciteProduits_ << " et contient " << nombreProduits_ << " produits suivants:" << endl;
+	cout << "--------------------Etat du rayon--------------------" << endl
+		<< "| Nom de la categorie: " << categorie_ << endl
+		<< "| Nombre d'articles: " << nombreProduits_ << endl
+		<< "| Capacite du rayon: " << capaciteProduits_ << endl;
+		
+	cout << "Le rayon contient les produits suivants: " << endl;
 	for (int i = 0; i < nombreProduits_; i++)
 	{
 		tousProduits_[i]->afficher();
