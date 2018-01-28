@@ -27,6 +27,7 @@ Rayon::Rayon(string cat)
 Rayon::~Rayon()
 {
 	delete[] tousProduits_;
+	tousProduits_ = nullptr;
 }
 
 /**
