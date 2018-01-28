@@ -60,6 +60,7 @@ double Panier::obtenirTotalApayer() const
 void Panier::ajouter(Produit* prod)
 {
 	contenuPanier_[nombreContenu_] = prod;
+	nombreContenu_++;
 	totalAPayer_ += prod->obtenirPrix();
 	if (nombreContenu_ == capaciteContenu_)
 	{

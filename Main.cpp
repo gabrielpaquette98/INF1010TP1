@@ -24,7 +24,7 @@ int main()
 	
 	vector<Produit*> listeDeProduits;
 
-	for (size_t i = 0; i < NOMBRE_OBJETS_A_CREER; i++)
+	for (int i = 0; i < NOMBRE_OBJETS_A_CREER; i++)
 	{
 		Produit* produitAjoute = new Produit("produit" + to_string(i+1), i + 1, 10.00);
 		listeDeProduits.push_back(produitAjoute);
