@@ -22,7 +22,7 @@ int main()
 
 	//1-  Creez 15 objets du classe produit
     
-    	const int NOMBRE_OBJETS_A_CREER = 15;
+    const int NOMBRE_OBJETS_A_CREER = 15;
 	
 
 
@@ -72,6 +72,7 @@ int main()
 
 	//10- Afficher le contenu du panier du client
 	clientParams.afficherPanier();
+	
      //11- livrer le panier du client
 	clientParams.livrerPanier();
    
@@ -80,14 +81,6 @@ int main()
 	clientParams.afficherPanier();
     
 	//13-  terminer le programme correctement
-	for (int i = 0; i < NOMBRE_OBJETS_A_CREER; i++)
-	{
-		delete listeDeProduits[i];
-	}
-	delete[] listeDeProduits;
-	listeDeProduits = nullptr;
-	
-	cout << "Execution terminee." << endl;
-	
+    
     return 0;
 }
