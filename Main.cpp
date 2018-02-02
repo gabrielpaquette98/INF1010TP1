@@ -1,8 +1,23 @@
 /**************************************************
 * Titre: Travail pratique #1 - Main.cpp
-* Date: 20 janvier 2018
-* Auteur: Mohammed Esseddik BENYAHIA
+* Date: 02 fevrier 2018
+* Auteur: Mohammed Esseddik BENYAHIA, Gabriel Paquette
+*         Vittorio Passuello-Dussault
 **************************************************/
+
+/**
+Réponses aux questions
+
+Quel est le lien (agrégation ou composition) entre la classe Client et la Classe Panier?
+Il s'agit d'une relation d'agrégation, puisque le Client et le Panier sont deux objets indépendants:
+Un Panier peut exister sans un Client et vice versa. C'est une agrégation par pointeur, puisque le Client 
+a comme attribut un pointeur vers un objet Panier.
+
+Quel est le lien (agrégation ou composition) entre un Produit et un Rayon?
+Il s'agit d'une relation d'agrégation, puisqu'un Rayon peut exister sans objets de la classe Produit 
+et vice versa. Il s'agit d'une agrégation par pointeur, puisque le lien reliant le Rayon aux objets de 
+la classe Produit est un pointeur vers un tableau de la classe Produit.
+ */
 
 #include "Produit.h"
 #include "Rayon.h"
