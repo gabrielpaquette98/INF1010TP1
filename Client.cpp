@@ -148,9 +148,7 @@ void Client::afficherPanier()
 {
 	if (monPanier_ != nullptr || monPanier_->obtenirNombreContenu() >= 0)
 	{
-		cout << "Votre Panier:" << endl;
-		for (int i = 0; i < monPanier_->obtenirNombreContenu(); i++)
-			monPanier_->obtenirContenuPanier()[i]->afficher();
+		monPanier_->afficher();
 	}
 	else
 		cout << "Votre panier est vide" << endl;
@@ -164,5 +162,4 @@ void Client::afficherPanier()
 void Client::livrerPanier()
 {
 	monPanier_->livrer();
-	delete monPanier_;
 }

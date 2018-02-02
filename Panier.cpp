@@ -22,8 +22,11 @@ Panier::Panier(int capacite)
 */
 Panier::~Panier()
 {
-	delete[] contenuPanier_;
-	contenuPanier_ = nullptr;
+	if (contenuPanier_ != nullptr)
+	{
+		delete[] contenuPanier_;
+		contenuPanier_ = nullptr;
+	}
 }
 
 /**
@@ -80,10 +83,8 @@ void Panier::ajouter(Produit* prod)
 */
 void Panier::livrer()
 {
-	for (int i = 0; i < nombreContenu_; i++)
-	{
-		delete contenuPanier_[i];
-	}
+	delete[] contenuPanier_;
+	contenuPanier_ = nullptr;
 	nombreContenu_ = 0;
 	totalAPayer_ = 0.0;
 }
@@ -95,14 +96,22 @@ void Panier::livrer()
 */
 void Panier::afficher()
 {
-	cout << "--------------------Etat du panier--------------------" << endl
-		<< "| Nombre d'articles: " << nombreContenu_ << endl
-		<< "| Capacite du panier: " << capaciteContenu_ << endl
-		<< "| Total a payer: " << totalAPayer_ << endl;
-	
-	cout << "Le panier contient les produits suivants: " << endl;
-	for (int i = 0; i < nombreContenu_; i++)
+	if (contenuPanier_ == nullptr)
 	{
-		contenuPanier_[i]->afficher();
+		cout << "Le panier a ete livree." << endl;
 	}
+	else
+	{
+		cout << "--------------------Etat du panier--------------------" << endl
+			<< "| Nombre d'articles: " << nombreContenu_ << endl
+			<< "| Capacite du panier: " << capaciteContenu_ << endl
+			<< "| Total a payer: " << totalAPayer_ << endl;
+
+		cout << "Le panier contient les produits suivants: " << endl;
+		for (int i = 0; i < nombreContenu_; i++)
+		{
+			contenuPanier_[i]->afficher();
+		}
+	}
+
 }
