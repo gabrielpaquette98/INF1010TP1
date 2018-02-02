@@ -26,8 +26,11 @@ Rayon::Rayon(string cat)
 */
 Rayon::~Rayon()
 {
-	delete[] tousProduits_;
-	tousProduits_ = nullptr;
+	if (tousProduits_ != nullptr)
+	{
+		delete[] tousProduits_;
+		tousProduits_ = nullptr;
+	}
 }
 
 /**
@@ -81,7 +84,10 @@ void Rayon::modifierCategorie(string cat)
 void Rayon::ajouterProduit(Produit* produit)
 {
 	if (tousProduits_ == nullptr)
-		tousProduits_ = new Produit*[CONSTANTE_CAPACITE];
+	{
+		capaciteProduits_ = CONSTANTE_CAPACITE;
+		tousProduits_ = new Produit*[capaciteProduits_];
+	}	
 	else
 		if (capaciteProduits_ == nombreProduits_)
 		{

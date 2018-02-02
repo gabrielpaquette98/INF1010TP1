@@ -25,8 +25,12 @@ Client::Client(string  nom, string prenom, int identifiant, string codePostal, l
  */
 Client::~Client()
 {
-	delete monPanier_;
-
+	if (monPanier_ != nullptr)
+	{
+		delete monPanier_;
+		monPanier_ = nullptr;
+	}
+		
 }
 
 /**
@@ -146,7 +150,7 @@ void Client::acheter(Produit * prod)
 */
 void Client::afficherPanier()
 {
-	if (monPanier_ != nullptr || monPanier_->obtenirNombreContenu() >= 0)
+	if (monPanier_ != nullptr && monPanier_->obtenirNombreContenu() > 0)
 	{
 		monPanier_->afficher();
 	}

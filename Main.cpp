@@ -16,18 +16,21 @@ using namespace std;
 
 int main()
 {
+	
+	
 	//C'est à vous de voir si vous devez allouer dynamiquement ou non les élèments
 
 	//1-  Creez 15 objets du classe produit
     
     	const int NOMBRE_OBJETS_A_CREER = 15;
 	
-	vector<Produit*> listeDeProduits;
+
+
+	Produit** listeDeProduits = new Produit*[15];
 
 	for (int i = 0; i < NOMBRE_OBJETS_A_CREER; i++)
 	{
-		Produit* produitAjoute = new Produit("produit" + to_string(i+1), i + 1, 10.00);
-		listeDeProduits.push_back(produitAjoute);
+		listeDeProduits[i] = new Produit("produit" + to_string(i+1), i + 1, 10.00);
 	}
     
 	//2-  Modifiez le nom, la référence, le prix de  troisieme objet Produit créé
@@ -44,7 +47,10 @@ int main()
    
     // 5- Ajouter 6 produits de  voret chaoix dans le rayon créé
 	for (int i = 0; i < 6; i++)
+	{
 		rayonDefault.ajouterProduit(listeDeProduits[i]);
+	}
+		
     
 
     // 6- afficher le contenu du rayon
@@ -74,6 +80,14 @@ int main()
 	clientParams.afficherPanier();
     
 	//13-  terminer le programme correctement
-    
+	for (int i = 0; i < NOMBRE_OBJETS_A_CREER; i++)
+	{
+		delete listeDeProduits[i];
+	}
+	delete[] listeDeProduits;
+	listeDeProduits = nullptr;
+	
+	cout << "Execution terminee." << endl;
+	
     return 0;
 }
