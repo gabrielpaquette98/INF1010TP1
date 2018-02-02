@@ -2,7 +2,7 @@
 * Nom: Produit.cpp
 * Auteurs: 1894061 et 1899088
 * Date: 2 fevrier 2018
-* Descripion: Impl�mentation de la classe Produit
+* Descripion: Implementation de la classe Produit
 *************************************************/
 #include "Produit.h"
 #include <iostream>
@@ -10,7 +10,7 @@
 using namespace std;
 
 /**
-* Constructeur par param�tres (valeurs par d�faut d�finies dans notre fichier Produit.h)
+* Constructeur par parametres (valeurs par defaut definies dans notre fichier Produit.h)
 *
 */
 Produit::Produit(string nom, int reference, double prix) 
@@ -28,8 +28,8 @@ string Produit::obtenirNom() const
 	return nom_;
 }
 /**
-* Accesseur du num�ro de r�f�rence du produit
-* \return reference_ {int} num�ro de r�f�rence du produit
+* Accesseur du numero de reference du produit
+* \return reference_ {int} numero de reference du produit
 */
 int Produit::obtenirReference() const
 {
@@ -46,7 +46,7 @@ double Produit::obtenirPrix() const
 
 /**
 * Mutateur du nom du produit
-* \param \in nom {string} nom � donner au produit
+* \param \in nom {string} nom a donner au produit
 * \return void
 */
 void Produit::modifierNom(string nom)
@@ -54,8 +54,8 @@ void Produit::modifierNom(string nom)
 	nom_ = nom;
 }
 /**
-* Mutateur de la r�f�rence du produit
-* \param \in reference {int} num�ro de r�f�rence � donner au produit
+* Mutateur de la reference du produit
+* \param \in reference {int} numero de reference a donner au produit
 * \return void
 */
 void Produit::modifierReference(int reference)
@@ -63,8 +63,8 @@ void Produit::modifierReference(int reference)
 	reference_ = reference;
 }
 /**
-* Mutateur de la r�f�rence du prix
-* \param \in prix {double} prix � donner au produit
+* Mutateur de la reference du prix
+* \param \in prix {double} prix a donner au produit
 * \return void
 */
 void Produit::modifierPrix(double prix)
@@ -73,7 +73,7 @@ void Produit::modifierPrix(double prix)
 }
 
 /**
-* M�thode permettant d'afficher un produit dans la console
+* Methode permettant d'afficher un produit dans la console
 * \param void
 * \return void
 */

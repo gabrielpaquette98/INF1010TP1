@@ -2,7 +2,7 @@
 * Nom: Rayon.cpp
 * Auteurs: 1894061 et 1899088
 * Date: 2 fevrier 2018
-* Descripion: Impl�mentation de la classe Rayon
+* Descripion: Implementation de la classe Rayon
 *************************************************/
 #include "Rayon.h"
 #include <iostream>
@@ -12,7 +12,7 @@ using namespace std;
 static const int CONSTANTE_CAPACITE = 5;
 
 /**
-* Constructeur par param�tres (valeurs par d�faut d�finies dans notre fichier Rayon.h)
+* Constructeur par parametres (valeurs par defaut definies dans notre fichier Rayon.h)
 *
 */
 Rayon::Rayon(string cat) 
@@ -35,8 +35,8 @@ Rayon::~Rayon()
 }
 
 /**
-* Accesseur du nom de cath�gorie du rayon
-* \return categorie_ {string} nom de cat�gorie du rayon
+* Accesseur du nom de cathegorie du rayon
+* \return categorie_ {string} nom de categorie du rayon
 */
 string Rayon::obtenirCategorie() const
 {
@@ -51,8 +51,8 @@ Produit** Rayon::obtenirTousProduits()
 	return tousProduits_;
 }
 /**
-* Accesseur de la capacit� du rayon
-* \return capaciteProduits_ {int} capacit� du rayon
+* Accesseur de la capacite du rayon
+* \return capaciteProduits_ {int} capacite du rayon
 */
 int Rayon::obtenirCapaciteProduits() const
 {
@@ -68,8 +68,8 @@ int Rayon::obtenirNombreProduits() const
 }
 
 /**
-* Mutateur du nom de cat�gorie du rayon
-* \param \in cat {string} nom � donner a la cat�gorie du rayon
+* Mutateur du nom de categorie du rayon
+* \param \in cat {string} nom a donner a la categorie du rayon
 * \return void
 */
 void Rayon::modifierCategorie(string cat)
@@ -78,8 +78,8 @@ void Rayon::modifierCategorie(string cat)
 }
 
 /**
-* M�thode permettant d'ajouter un produit au rayon selon le nombre d�j� contenu
-* \param \in prod {Produit*} Pointeur du produit � ajouter
+* M�thode permettant d'ajouter un produit au rayon selon le nombre deja contenu
+* \param \in prod {Produit*} Pointeur du produit a ajouter
 * \return void
 */
 void Rayon::ajouterProduit(Produit* produit)
@@ -93,7 +93,7 @@ void Rayon::ajouterProduit(Produit* produit)
 		if (capaciteProduits_ == nombreProduits_)
 		{
 			capaciteProduits_ += CONSTANTE_CAPACITE;
-			Produit** nouveauRayon = new Produit*[capaciteProduits_];//on cr�e la nouvelle liste de produits
+			Produit** nouveauRayon = new Produit*[capaciteProduits_];
 			for (int i = 0; i < nombreProduits_; i++)
 				nouveauRayon[i] = tousProduits_[i];
 			delete[] tousProduits_;
@@ -104,7 +104,7 @@ void Rayon::ajouterProduit(Produit* produit)
 }
 
 /**
-* M�thode permettant d'afficher un rayon dans la console
+* Methode permettant d'afficher un rayon dans la console
 * \param void
 * \return void
 */

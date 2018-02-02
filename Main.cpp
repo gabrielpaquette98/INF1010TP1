@@ -5,7 +5,7 @@
 *         Vittorio Passuello-Dussault
 **************************************************/
 
-/**
+/*
 Réponses aux questions
 
 Quel est le lien (agrégation ou composition) entre la classe Client et la Classe Panier?
