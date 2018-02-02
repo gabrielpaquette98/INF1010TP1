@@ -20,7 +20,7 @@ int main()
 
 	//1-  Creez 15 objets du classe produit
     
-    	const int NOMBRE_OBJETS_A_CREER = 15;
+    const int NOMBRE_OBJETS_A_CREER = 15;
 	
 	vector<Produit*> listeDeProduits;
 
@@ -66,6 +66,7 @@ int main()
 
 	//10- Afficher le contenu du panier du client
 	clientParams.afficherPanier();
+	
      //11- livrer le panier du client
 	clientParams.livrerPanier();
    
@@ -74,6 +75,8 @@ int main()
 	clientParams.afficherPanier();
     
 	//13-  terminer le programme correctement
-    
+    for (int i = 0;i < listeDeProduits.size(); i++)
+		delete listeDeProduits[i];
+
     return 0;
 }

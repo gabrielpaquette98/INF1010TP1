@@ -6,6 +6,8 @@
 
 #include "./panier.h"
 
+static const uint8_t FACTEUR_AUGMENTATION_PANIER = 2;
+
 /**
 * Constructeur par paramètres
 * 
@@ -65,7 +67,7 @@ void Panier::ajouter(Produit* prod)
 {
 	if (nombreContenu_ == capaciteContenu_)
 	{
-		capaciteContenu_ *= 2;
+		capaciteContenu_ *= FACTEUR_AUGMENTATION_PANIER;
 		Produit** nouveauPanier = new Produit*[capaciteContenu_];//on crée la nouvelle liste de produits
 		for (int i = 0; i < nombreContenu_; i++)
 			nouveauPanier[i] = contenuPanier_[i];
@@ -98,7 +100,7 @@ void Panier::afficher()
 {
 	if (contenuPanier_ == nullptr)
 	{
-		cout << "Le panier a ete livree." << endl;
+		cout << "Le panier a ete livre." << endl;
 	}
 	else
 	{

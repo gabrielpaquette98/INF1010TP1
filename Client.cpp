@@ -1,14 +1,15 @@
 /**************************************************
 * Nom: client.cpp
 * Auteurs: 1894061 et 1899088
-* Descripion: Implémentation de la classe Panier
+* Descripion: Implï¿½mentation de la classe Panier
 *************************************************/
 
 #include "./client.h"
 
+static const uint8_t CAPACITE_DEFAULT_PANIER = 4;
 
 /**
- * Constructeur par paramètres
+ * Constructeur par paramï¿½tres
  * 
  */
 Client::Client(string  nom, string prenom, int identifiant, string codePostal, long date)
@@ -39,8 +40,8 @@ string Client::obtenirNom() const
 }
 
 /**
-* Accesseur du prénom du client
-* \return prenom_ {string} prénom du client
+* Accesseur du prï¿½nom du client
+* \return prenom_ {string} prï¿½nom du client
 */
 string Client::obtenirPrenom() const
 {
@@ -77,7 +78,7 @@ long Client::obtenirDateNaissance() const
 
 /**
  * Mutateur du nom du client
- * \param \in nom {string} nom à donner au client
+ * \param \in nom {string} nom ï¿½ donner au client
  * \return void
  */
 void Client::modifierNom(string nom)
@@ -86,8 +87,8 @@ void Client::modifierNom(string nom)
 }
 
 /**
-* Mutateur du prénom du client
-* \param \in prenom {string} prénom à donner au client
+* Mutateur du prï¿½nom du client
+* \param \in prenom {string} prï¿½nom ï¿½ donner au client
 * \return void
 */
 void Client::modifierPrenom(string prenom)
@@ -97,7 +98,7 @@ void Client::modifierPrenom(string prenom)
 
 /**
 * Mutateur de l'identifiant du client
-* \param \in identifiant {int} identifiant à donner au client
+* \param \in identifiant {int} identifiant ï¿½ donner au client
 * \return void
 */
 void Client::modifierIdentifiant(int identifiant)
@@ -107,7 +108,7 @@ void Client::modifierIdentifiant(int identifiant)
 
 /**
 * Mutateur du code postal du client
-* \param \in codePostal {string} code postal à donner au client
+* \param \in codePostal {string} code postal ï¿½ donner au client
 * \return void
 */
 void Client::modifierCodePostal(string codePostal)
@@ -117,7 +118,7 @@ void Client::modifierCodePostal(string codePostal)
 
 /**
 * Mutateur de la date de naissance du client
-* \param \in date {ling} date de naissance à donner au client
+* \param \in date {ling} date de naissance ï¿½ donner au client
 * \return void
 */
 void Client::modifierDateNaissance(long date)
@@ -126,36 +127,36 @@ void Client::modifierDateNaissance(long date)
 }
 
 /**
-* Méthode permettant à un client d'acheter un produit
-* et de l'ajouter à son panier
-* \param \in prod {Produit*} produit à acheter
+* Mï¿½thode permettant ï¿½ un client d'acheter un produit
+* et de l'ajouter ï¿½ son panier
+* \param \in prod {Produit*} produit ï¿½ acheter
 * \return void
 */
 void Client::acheter(Produit * prod)
 {
 	if (monPanier_ == nullptr)
-		monPanier_ = new Panier(4);
+		monPanier_ = new Panier(CAPACITE_DEFAULT_PANIER);
 	monPanier_->ajouter(prod);
 }
 
 /**
-* Méthode permettant d'afficher le contenu du panier d'un client
+* Mï¿½thode permettant d'afficher le contenu du panier d'un client
 * dans la console
 * \param void
 * \return void
 */
 void Client::afficherPanier()
 {
-	if (monPanier_ != nullptr || monPanier_->obtenirNombreContenu() >= 0)
-	{
-		monPanier_->afficher();
-	}
+	if (monPanier_ == nullptr)
+		cout << "Veuillez commencer a acheter des articles pour pouvoir initialiser le panier" << endl;
+	else if (monPanier_->obtenirNombreContenu() == 0)
+		cout << "Votre panier ne contient aucun article" << endl;
 	else
-		cout << "Votre panier est vide" << endl;
+		monPanier_->afficher();
 }
 
 /**
-* Méthode permettant de livrer le panier d'un client
+* Mï¿½thode permettant de livrer le panier d'un client
 * \param void
 * \return void
 */
