@@ -29,8 +29,8 @@ public:
 private:
     
     Produit ** contenuPanier_;
-    int  nombreContenu_;
     int capaciteContenu_;
+    int  nombreContenu_;
     double totalAPayer_;
 };
 
