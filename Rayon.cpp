@@ -85,7 +85,8 @@ void Rayon::ajouterProduit(Produit* produit)
 	else
 		if (capaciteProduits_ == nombreProduits_)
 		{
-			Produit** nouveauRayon = new Produit*[capaciteProduits_ + CONSTANTE_CAPACITE];//on crée la nouvelle liste de produits
+			capaciteProduits_ += CONSTANTE_CAPACITE;
+			Produit** nouveauRayon = new Produit*[capaciteProduits_];//on crée la nouvelle liste de produits
 			for (int i = 0; i < nombreProduits_; i++)
 				nouveauRayon[i] = tousProduits_[i];
 			delete[] tousProduits_;

@@ -26,6 +26,7 @@ Client::Client(string  nom, string prenom, int identifiant, string codePostal, l
 Client::~Client()
 {
 	delete monPanier_;
+
 }
 
 /**

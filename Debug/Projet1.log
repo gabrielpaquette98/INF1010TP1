@@ -1,24 +1,2 @@
-﻿  Rayon.cpp
-\\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\rayon.cpp(25): error C2511: 'std::string Rayon::obtenirCategorie(void) const' : impossible de trouver la fonction membre surchargée dans 'Rayon'
-  \\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\rayon.h(15): note: voir la déclaration de 'Rayon'
-\\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\rayon.cpp(26): error C2597: référence non conforme à un membre non static 'Rayon::categorie_'
-\\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\rayon.cpp(33): error C2511: 'int Rayon::obtenirCapaciteProduits(void) const' : impossible de trouver la fonction membre surchargée dans 'Rayon'
-  \\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\rayon.h(15): note: voir la déclaration de 'Rayon'
-\\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\rayon.cpp(34): error C2597: référence non conforme à un membre non static 'Rayon::capaciteProduits_'
-\\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\rayon.cpp(37): error C2511: 'int Rayon::obtenirNombreProduits(void) const' : impossible de trouver la fonction membre surchargée dans 'Rayon'
-  \\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\rayon.h(15): note: voir la déclaration de 'Rayon'
-\\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\rayon.cpp(38): error C2597: référence non conforme à un membre non static 'Rayon::nombreProduits_'
-  Produit.cpp
-\\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\produit.cpp(22): error C2511: 'std::string Produit::obtenirNom(void) const' : impossible de trouver la fonction membre surchargée dans 'Produit'
-  \\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\produit.h(15): note: voir la déclaration de 'Produit'
-\\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\produit.cpp(23): error C2597: référence non conforme à un membre non static 'Produit::nom_'
-\\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\produit.cpp(26): error C2511: 'int Produit::obtenirReference(void) const' : impossible de trouver la fonction membre surchargée dans 'Produit'
-  \\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\produit.h(15): note: voir la déclaration de 'Produit'
-\\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\produit.cpp(27): error C2597: référence non conforme à un membre non static 'Produit::reference_'
-\\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\produit.cpp(30): error C2511: 'double Produit::obtenirPrix(void) const' : impossible de trouver la fonction membre surchargée dans 'Produit'
-  \\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\produit.h(15): note: voir la déclaration de 'Produit'
-\\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\produit.cpp(31): error C2597: référence non conforme à un membre non static 'Produit::prix_'
-\\ens06.labos.polymtl.ca\profiles\gapaqb\documents\visual studio 2017\projects\projet1\projet1\produit.cpp(51): error C2110: '+' : impossible d'ajouter deux pointeurs
-  Panier.cpp
-  Client.cpp
-  Génération de code en cours...
+﻿  Panier.cpp
+  Projet1.vcxproj -> F:\G\Poly\Session 2\INF1010_Programmation_Oriente_Objet\TP1\INF1010TP1\Debug\Projet1.exe
