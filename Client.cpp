@@ -1,7 +1,7 @@
 /**************************************************
 * Nom: client.cpp
 * Auteurs: 1894061 et 1899088
-* Descripion: Impl�mentation de la classe Panier
+* Descripion: Implementation de la classe Panier
 *************************************************/
 
 #include "./client.h"
@@ -9,7 +9,7 @@
 static const uint8_t CAPACITE_DEFAULT_PANIER = 4;
 
 /**
- * Constructeur par param�tres
+ * Constructeur par parametres
  * 
  */
 Client::Client(string  nom, string prenom, int identifiant, string codePostal, long date)
@@ -44,8 +44,8 @@ string Client::obtenirNom() const
 }
 
 /**
-* Accesseur du pr�nom du client
-* \return prenom_ {string} pr�nom du client
+* Accesseur du prenom du client
+* \return prenom_ {string} prenom du client
 */
 string Client::obtenirPrenom() const
 {
@@ -82,7 +82,7 @@ long Client::obtenirDateNaissance() const
 
 /**
  * Mutateur du nom du client
- * \param \in nom {string} nom � donner au client
+ * \param \in nom {string} nom a donner au client
  * \return void
  */
 void Client::modifierNom(string nom)
@@ -91,8 +91,8 @@ void Client::modifierNom(string nom)
 }
 
 /**
-* Mutateur du pr�nom du client
-* \param \in prenom {string} pr�nom � donner au client
+* Mutateur du prenom du client
+* \param \in prenom {string} prenom a donner au client
 * \return void
 */
 void Client::modifierPrenom(string prenom)
@@ -102,7 +102,7 @@ void Client::modifierPrenom(string prenom)
 
 /**
 * Mutateur de l'identifiant du client
-* \param \in identifiant {int} identifiant � donner au client
+* \param \in identifiant {int} identifiant a donner au client
 * \return void
 */
 void Client::modifierIdentifiant(int identifiant)
@@ -112,7 +112,7 @@ void Client::modifierIdentifiant(int identifiant)
 
 /**
 * Mutateur du code postal du client
-* \param \in codePostal {string} code postal � donner au client
+* \param \in codePostal {string} code postal a donner au client
 * \return void
 */
 void Client::modifierCodePostal(string codePostal)
@@ -122,7 +122,7 @@ void Client::modifierCodePostal(string codePostal)
 
 /**
 * Mutateur de la date de naissance du client
-* \param \in date {ling} date de naissance � donner au client
+* \param \in date {ling} date de naissance a donner au client
 * \return void
 */
 void Client::modifierDateNaissance(long date)
@@ -131,9 +131,9 @@ void Client::modifierDateNaissance(long date)
 }
 
 /**
-* M�thode permettant � un client d'acheter un produit
-* et de l'ajouter � son panier
-* \param \in prod {Produit*} produit � acheter
+* Methode permettant a un client d'acheter un produit
+* et de l'ajouter a son panier
+* \param \in prod {Produit*} produit a acheter
 * \return void
 */
 void Client::acheter(Produit * prod)
@@ -144,7 +144,7 @@ void Client::acheter(Produit * prod)
 }
 
 /**
-* M�thode permettant d'afficher le contenu du panier d'un client
+* Methode permettant d'afficher le contenu du panier d'un client
 * dans la console
 * \param void
 * \return void
@@ -160,7 +160,7 @@ void Client::afficherPanier()
 }
 
 /**
-* M�thode permettant de livrer le panier d'un client
+* Methode permettant de livrer le panier d'un client
 * \param void
 * \return void
 */

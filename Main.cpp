@@ -81,6 +81,11 @@ int main()
 	clientParams.afficherPanier();
     
 	//13-  terminer le programme correctement
-    
+	for (int i = 0; i < NOMBRE_OBJETS_A_CREER; i++)
+	{
+		delete listeDeProduits[i];
+	}
+	delete[] listeDeProduits;
+
     return 0;
 }
