@@ -1,7 +1,8 @@
 /**************************************************
 * Nom: Produit.cpp
 * Auteurs: 1894061 et 1899088
-* Descripion: Implémentation de la classe Produit
+* Date: 2 fevrier 2018
+* Descripion: Implï¿½mentation de la classe Produit
 *************************************************/
 #include "Produit.h"
 #include <iostream>
@@ -9,7 +10,7 @@
 using namespace std;
 
 /**
-* Constructeur par paramètres (valeurs par défaut définies dans notre fichier Produit.h)
+* Constructeur par paramï¿½tres (valeurs par dï¿½faut dï¿½finies dans notre fichier Produit.h)
 *
 */
 Produit::Produit(string nom, int reference, double prix) 
@@ -27,8 +28,8 @@ string Produit::obtenirNom() const
 	return nom_;
 }
 /**
-* Accesseur du numéro de référence du produit
-* \return reference_ {int} numéro de référence du produit
+* Accesseur du numï¿½ro de rï¿½fï¿½rence du produit
+* \return reference_ {int} numï¿½ro de rï¿½fï¿½rence du produit
 */
 int Produit::obtenirReference() const
 {
@@ -45,7 +46,7 @@ double Produit::obtenirPrix() const
 
 /**
 * Mutateur du nom du produit
-* \param \in nom {string} nom à donner au produit
+* \param \in nom {string} nom ï¿½ donner au produit
 * \return void
 */
 void Produit::modifierNom(string nom)
@@ -53,8 +54,8 @@ void Produit::modifierNom(string nom)
 	nom_ = nom;
 }
 /**
-* Mutateur de la référence du produit
-* \param \in reference {int} numéro de référence à donner au produit
+* Mutateur de la rï¿½fï¿½rence du produit
+* \param \in reference {int} numï¿½ro de rï¿½fï¿½rence ï¿½ donner au produit
 * \return void
 */
 void Produit::modifierReference(int reference)
@@ -62,8 +63,8 @@ void Produit::modifierReference(int reference)
 	reference_ = reference;
 }
 /**
-* Mutateur de la référence du prix
-* \param \in prix {double} prix à donner au produit
+* Mutateur de la rï¿½fï¿½rence du prix
+* \param \in prix {double} prix ï¿½ donner au produit
 * \return void
 */
 void Produit::modifierPrix(double prix)
@@ -72,7 +73,7 @@ void Produit::modifierPrix(double prix)
 }
 
 /**
-* Méthode permettant d'afficher un produit dans la console
+* Mï¿½thode permettant d'afficher un produit dans la console
 * \param void
 * \return void
 */

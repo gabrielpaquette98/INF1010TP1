@@ -1,6 +1,7 @@
 /**************************************************
 * Nom: client.cpp
 * Auteurs: 1894061 et 1899088
+* Date: 2 fevrier 2018
 * Descripion: Impl�mentation de la classe Panier
 *************************************************/
 
